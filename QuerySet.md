@@ -10,9 +10,9 @@
 
 Создать 5 комментариев с разным текстом, Хотя бы один должен начинаться со слова "Start", хоть один в середине должен иметь слово "Middle", хоть один должен заканчиваться словом "Finish".
 
->  CommentToArticle.objects.create(author = a, article = ar,  comment='Seredina eto middle')
->  CommentToArticle.objects.create(author = a, article = ar,  comment='Start tut stoit pervim')
->  CommentToArticle.objects.create(author = a, article = ar,  comment='A tut stoit poslednim FinIsH')
+>  CommentToArticle.objects.create(author = a, article = ar,  comment='Seredina eto middle') <br>
+>  CommentToArticle.objects.create(author = a, article = ar,  comment='Start tut stoit pervim') <br>
+>  CommentToArticle.objects.create(author = a, article = ar,  comment='A tut stoit poslednim FinIsH')<br>
 
 ![2](https://user-images.githubusercontent.com/33054469/110189833-40bfc280-7e29-11eb-896d-f29fa640f188.png)
 
@@ -36,7 +36,7 @@
 
 Удалить все комментарии у которых в тексте есть буква "k", но не удалять если есть буква "с".
 
-> CommentToArticle.objects.filter(comment__contains='k').exclude(comment__contains='c').delete()
+> CommentToArticle.objects.filter(comment__contains='k').exclude(comment__contains='c').delete() <br>
 
 ![delete222](https://user-images.githubusercontent.com/33054469/110190369-9d23e180-7e2b-11eb-9207-ae3b017ede8e.png)
 
@@ -44,8 +44,8 @@
 
 Получить первые 2 коментария по дате создания к статье у которой имя автора последнее по алфавиту.
 
-> authorInTheEnd = Author.objects.order_by('name')[0]
-> CommentToArticle.objects.filter(author = authorInTheEnd).order_by('created_at')[2:]
+> authorInTheEnd = Author.objects.order_by('name')[0] <br>
+> CommentToArticle.objects.filter(author = authorInTheEnd).order_by('created_at')[2:] <br>
 
 ![konec](https://user-images.githubusercontent.com/33054469/110190472-1faca100-7e2c-11eb-96d7-50c6b003d72f.png)
 
